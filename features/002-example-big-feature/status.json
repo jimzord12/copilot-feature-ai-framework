@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Phase 1: Initial Setup",
+    "status": "done"
+  },
+  {
+    "name": "Phase 2: Building the Core",
+    "status": "in-progress"
+  },
+  {
+    "name": "Phase 3: Final Polishing",
+    "status": "todo"
+  }
+]
