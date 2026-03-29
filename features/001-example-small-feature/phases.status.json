@@ -1,0 +1,25 @@
+[
+  {
+    "id": "001-add-new-col-user-table",
+    "name": "Add New Column To User Table",
+    "path": "phases/001-add-new-col-user-table",
+    "status": "in-progress",
+    "tasks": [
+      {
+        "id": "001-update-schema",
+        "description": "Update the user table schema to include the new column.",
+        "status": "completed"
+      },
+      {
+        "id": "002-apply-migration",
+        "description": "Create and validate the migration for the new column.",
+        "status": "in-progress"
+      },
+      {
+        "id": "003-update-app-usage",
+        "description": "Update application code paths that read or write the new column.",
+        "status": "not-started"
+      }
+    ]
+  }
+]

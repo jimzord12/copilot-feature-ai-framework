@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phases Status",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Phase"
+  },
+  "definitions": {
+    "Task": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A stable identifier for the task."
+        },
+        "description": {
+          "type": "string",
+          "description": "A short machine-friendly description of the task state entry."
+        },
+        "status": {
+          "type": "string",
+          "description": "The current progress of the task.",
+          "enum": ["not-started", "in-progress", "completed"]
+        }
+      },
+      "required": ["id", "description", "status"]
+    },
+    "Phase": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A stable identifier for the phase."
+        },
+        "name": {
+          "type": "string",
+          "description": "The human-readable phase name."
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path from the containing feature or epic root to the phase folder."
+        },
+        "status": {
+          "type": "string",
+          "description": "The current progress of the phase.",
+          "enum": ["not-started", "in-progress", "completed"]
+        },
+        "tasks": {
+          "type": "array",
+          "description": "Machine-friendly phase task state entries.",
+          "items": {
+            "$ref": "#/definitions/Task"
+          }
+        }
+      },
+      "required": ["id", "name", "path", "status", "tasks"]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "001-create-tables",
+    "name": "Create Auth Tables",
+    "path": "phases/001-create-tables",
+    "status": "not-started",
+    "tasks": [
+      {
+        "id": "001-design-schema",
+        "description": "Define the auth-related tables, keys, and constraints.",
+        "status": "not-started"
+      },
+      {
+        "id": "002-create-migration",
+        "description": "Create the migration or SQL script for the auth tables.",
+        "status": "not-started"
+      },
+      {
+        "id": "003-verify-integration",
+        "description": "Verify the application can read and write through the new tables.",
+        "status": "not-started"
+      }
+    ]
+  }
+]

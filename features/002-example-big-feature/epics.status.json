@@ -1,0 +1,8 @@
+[
+  {
+    "id": "001-auth-integration",
+    "name": "Auth Integration",
+    "path": "epics/001-auth-integration",
+    "status": "in-progress"
+  }
+]
