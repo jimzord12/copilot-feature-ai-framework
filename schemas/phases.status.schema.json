@@ -2,9 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Phases Status",
   "type": "array",
-  "items": {
-    "$ref": "#/definitions/Phase"
-  },
+  "items": { "$ref": "#/definitions/Phase" },
   "definitions": {
     "Task": {
       "type": "object",
@@ -12,11 +10,24 @@
       "properties": {
         "id": {
           "type": "string",
+          "minLength": 1,
           "description": "A stable identifier for the task."
         },
-        "description": {
+        "name": {
           "type": "string",
-          "description": "A short machine-friendly description of the task state entry."
+          "minLength": 1,
+          "description": "The human-readable task name."
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\.md$",
+          "description": "Relative path from the containing feature or epic root to the task markdown file."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A short summary used to select and understand the task before opening its file."
         },
         "status": {
           "type": "string",
@@ -24,7 +35,7 @@
           "enum": ["not-started", "in-progress", "completed"]
         }
       },
-      "required": ["id", "description", "status"]
+      "required": ["id", "name", "path", "summary", "status"]
     },
     "Phase": {
       "type": "object",
@@ -32,15 +43,23 @@
       "properties": {
         "id": {
           "type": "string",
+          "minLength": 1,
           "description": "A stable identifier for the phase."
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The human-readable phase name."
         },
         "path": {
           "type": "string",
+          "minLength": 1,
           "description": "Relative path from the containing feature or epic root to the phase folder."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A short summary used to choose the phase before opening its markdown file."
         },
         "status": {
           "type": "string",
@@ -50,12 +69,10 @@
         "tasks": {
           "type": "array",
           "description": "Machine-friendly phase task state entries.",
-          "items": {
-            "$ref": "#/definitions/Task"
-          }
+          "items": { "$ref": "#/definitions/Task" }
         }
       },
-      "required": ["id", "name", "path", "status", "tasks"]
+      "required": ["id", "name", "path", "summary", "status", "tasks"]
     }
   }
 }

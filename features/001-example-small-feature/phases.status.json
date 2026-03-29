@@ -3,21 +3,28 @@
     "id": "001-add-new-col-user-table",
     "name": "Add New Column To User Table",
     "path": "phases/001-add-new-col-user-table",
+    "summary": "Add and propagate a new column on the user table across schema, migrations, and application usage.",
     "status": "in-progress",
     "tasks": [
       {
-        "id": "001-update-schema",
-        "description": "Update the user table schema to include the new column.",
+        "id": "001-update-user-schema",
+        "name": "Update user schema",
+        "path": "phases/001-add-new-col-user-table/tasks/001-update-user-schema.md",
+        "summary": "Update the user table model or schema definition to include the new column.",
         "status": "completed"
       },
       {
-        "id": "002-apply-migration",
-        "description": "Create and validate the migration for the new column.",
+        "id": "002-create-and-verify-migration",
+        "name": "Create and verify migration",
+        "path": "phases/001-add-new-col-user-table/tasks/002-create-and-verify-migration.md",
+        "summary": "Create the migration for the new column and verify it applies cleanly.",
         "status": "in-progress"
       },
       {
-        "id": "003-update-app-usage",
-        "description": "Update application code paths that read or write the new column.",
+        "id": "003-update-application-usage",
+        "name": "Update application usage",
+        "path": "phases/001-add-new-col-user-table/tasks/003-update-application-usage.md",
+        "summary": "Update application code paths that read or write the new column.",
         "status": "not-started"
       }
     ]

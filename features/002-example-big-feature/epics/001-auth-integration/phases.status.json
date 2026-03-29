@@ -3,21 +3,28 @@
     "id": "001-create-tables",
     "name": "Create Auth Tables",
     "path": "phases/001-create-tables",
+    "summary": "Create the database structures required to support the auth integration epic.",
     "status": "not-started",
     "tasks": [
       {
-        "id": "001-design-schema",
-        "description": "Define the auth-related tables, keys, and constraints.",
+        "id": "001-create-user-table",
+        "name": "Create user table",
+        "path": "phases/001-create-tables/tasks/001-create-user-table.md",
+        "summary": "Add the primary user table and its core columns needed by the auth flow.",
         "status": "not-started"
       },
       {
-        "id": "002-create-migration",
-        "description": "Create the migration or SQL script for the auth tables.",
+        "id": "002-create-session-table",
+        "name": "Create session table",
+        "path": "phases/001-create-tables/tasks/002-create-session-table.md",
+        "summary": "Add the session storage table and relationships required for authenticated sessions.",
         "status": "not-started"
       },
       {
-        "id": "003-verify-integration",
-        "description": "Verify the application can read and write through the new tables.",
+        "id": "003-verify-auth-table-integration",
+        "name": "Verify auth table integration",
+        "path": "phases/001-create-tables/tasks/003-verify-auth-table-integration.md",
+        "summary": "Verify the application can read and write through the new auth-related tables.",
         "status": "not-started"
       }
     ]

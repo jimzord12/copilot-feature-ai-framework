@@ -3,6 +3,7 @@
     "id": "001-auth-integration",
     "name": "Auth Integration",
     "path": "epics/001-auth-integration",
+    "summary": "Introduce the core authentication data model and application integration points.",
     "status": "in-progress"
   }
 ]

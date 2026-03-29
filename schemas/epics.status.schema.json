@@ -2,9 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Epics Status",
   "type": "array",
-  "items": {
-    "$ref": "#/definitions/Epic"
-  },
+  "items": { "$ref": "#/definitions/Epic" },
   "definitions": {
     "Epic": {
       "type": "object",
@@ -12,15 +10,23 @@
       "properties": {
         "id": {
           "type": "string",
+          "minLength": 1,
           "description": "A stable identifier for the epic."
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The human-readable epic name."
         },
         "path": {
           "type": "string",
+          "minLength": 1,
           "description": "Relative path from the containing feature root to the epic folder."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A short summary used to choose the epic before opening its markdown files."
         },
         "status": {
           "type": "string",
@@ -28,7 +34,7 @@
           "enum": ["not-started", "in-progress", "completed"]
         }
       },
-      "required": ["id", "name", "path", "status"]
+      "required": ["id", "name", "path", "summary", "status"]
     }
   }
 }
