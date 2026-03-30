@@ -64,7 +64,7 @@
         "status": {
           "type": "string",
           "description": "The current progress of the phase.",
-          "enum": ["not-started", "in-progress", "completed"]
+          "enum": ["not-started", "tasks-generated", "in-progress", "completed"]
         },
         "tasks": {
           "type": "array",

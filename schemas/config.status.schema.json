@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Epics Status",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "initCompleted": {
+      "type": "boolean",
+      "description": "Indicates whether the initialization flow has been completed."
+    }
+  }
+}
